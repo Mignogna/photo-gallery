@@ -1,0 +1,206 @@
+$primary-color: #fff;
+$secondary-color: #d2691e;
+$text-color: #777;
+$bg-color: #000;
+$container-width: 1170px;
+
+@mixin container {
+  max-width: $container-width;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin bg-img($img) {
+  background-image: url("../img/#{$img}");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s;
+  &:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/#{$img}");
+  }
+}
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans";
+  box-sizing: border-box;
+}
+body {
+  background-color: $bg-color;
+  color: $text-color;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+    transition: 0.4s;
+  }
+  ul {
+    list-style: none;
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  @include container;
+
+  @include mobile {
+    padding: 1.1rem;
+  }
+  &-brand {
+    color: $primary-color;
+    font-size: 3rem;
+    transform: translateX(-12rem);
+    @include tablet {
+      transform: translateX(1rem);
+      font-size: 2rem;
+    }
+    @include mobile {
+      transform: translateX(1rem);
+      font-size: 2.5rem;
+    }
+  }
+  &-navbar {
+    ul {
+      height: 100%;
+      @include flex-center;
+
+      @include mobile {
+        display: none;
+      }
+    }
+    li {
+      margin: 0 1rem;
+      text-transform: uppercase;
+      font-size: 1rem;
+      @include tablet {
+        font-size: 0.5rem;
+      }
+    }
+    .active {
+      color: $secondary-color;
+    }
+    a {
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+  &-social-media {
+    ul {
+      height: 100%;
+      @include flex-center;
+
+      @include mobile {
+        display: none;
+      }
+    }
+    li {
+      margin: 0 1rem;
+      font-size: 1.2rem;
+    }
+    a {
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.gallery {
+  @include container;
+  @include flex-center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  @include mobile {
+    flex-direction: column;
+  }
+  &-card {
+    width: 31%;
+    height: 400px;
+    margin-bottom: 4%;
+    @include flex-center;
+    flex-direction: column;
+    color: $primary-color;
+    @include mobile {
+      width: 90%;
+      margin-bottom: 6%;
+    }
+  }
+  &-card-title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  &-card-btn {
+    padding: 0.6rem 2rem;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    &:hover {
+      background-color: $primary-color;
+      color: $bg-color;
+    }
+  }
+  #card-1 {
+    @include bg-img("animal.jpg");
+  }
+  #card-2 {
+    @include bg-img("architecture.jpeg");
+  }
+  #card-3 {
+    @include bg-img("cities.jpg");
+  }
+  #card-4 {
+    @include bg-img("physical_activitie.jpeg");
+  }
+  #card-5 {
+    @include bg-img("decoration.jpg");
+  }
+  #card-6 {
+    @include bg-img("sports.jpg");
+  }
+  #card-7 {
+    @include bg-img("nature.jpg");
+  }
+  #card-8 {
+    @include bg-img("people.jpg");
+  }
+  #card-9 {
+    @include bg-img("food.jpeg");
+  }
+}
+footer {
+  text-align: center;
+  padding-bottom: 2rem;
+  span {
+    color: $secondary-color;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}

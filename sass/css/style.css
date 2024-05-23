@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans";
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #777;
+}
+body a {
+  color: #777;
+  text-decoration: none;
+  transition: 0.4s;
+}
+body ul {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+}
+@media (max-width: 425px) {
+  .header {
+    padding: 1.1rem;
+  }
+}
+.header-brand {
+  color: #fff;
+  font-size: 3rem;
+  transform: translateX(-12rem);
+}
+@media (max-width: 768px) {
+  .header-brand {
+    transform: translateX(1rem);
+    font-size: 2rem;
+  }
+}
+@media (max-width: 425px) {
+  .header-brand {
+    transform: translateX(1rem);
+    font-size: 2.5rem;
+  }
+}
+.header-navbar ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 425px) {
+  .header-navbar ul {
+    display: none;
+  }
+}
+.header-navbar li {
+  margin: 0 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .header-navbar li {
+    font-size: 0.5rem;
+  }
+}
+.header-navbar .active {
+  color: #d2691e;
+}
+.header-navbar a:hover {
+  color: #d2691e;
+}
+.header-social-media ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 425px) {
+  .header-social-media ul {
+    display: none;
+  }
+}
+.header-social-media li {
+  margin: 0 1rem;
+  font-size: 1.2rem;
+}
+.header-social-media a:hover {
+  color: #d2691e;
+}
+
+.gallery {
+  max-width: 1170px;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+@media (max-width: 425px) {
+  .gallery {
+    flex-direction: column;
+  }
+}
+.gallery-card {
+  width: 31%;
+  height: 400px;
+  margin-bottom: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+@media (max-width: 425px) {
+  .gallery-card {
+    width: 90%;
+    margin-bottom: 6%;
+  }
+}
+.gallery-card-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.gallery-card-btn {
+  padding: 0.6rem 2rem;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.gallery-card-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+.gallery #card-1 {
+  background-image: url("../img/animal.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-1:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/animal.jpg");
+}
+.gallery #card-2 {
+  background-image: url("../img/architecture.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-2:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/architecture.jpeg");
+}
+.gallery #card-3 {
+  background-image: url("../img/cities.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-3:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cities.jpg");
+}
+.gallery #card-4 {
+  background-image: url("../img/physical_activitie.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-4:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/physical_activitie.jpeg");
+}
+.gallery #card-5 {
+  background-image: url("../img/decoration.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-5:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/decoration.jpg");
+}
+.gallery #card-6 {
+  background-image: url("../img/sports.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-6:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sports.jpg");
+}
+.gallery #card-7 {
+  background-image: url("../img/nature.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-7:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/nature.jpg");
+}
+.gallery #card-8 {
+  background-image: url("../img/people.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-8:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/people.jpg");
+}
+.gallery #card-9 {
+  background-image: url("../img/food.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-9:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/food.jpeg");
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+footer span {
+  color: #d2691e;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
